@@ -13,12 +13,164 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Pacifico', cursive;
 
 */
+body {
+    background-color: #ff8e2d;
+    color: #eeeaeb;
+    font-family: "Poppins", sans-serif;
+}
 
-/* UNIVERSAL STYLES */
+/* Utility Classes */
+
+.container {
+    margin: auto;
+    max-width: 100%;
+}
+
+.flex {
+    align-items: center;
+    display: flex;
+}
+
+/* Header */
+
+header {
+    background-color: #21AAAC;
+    color: #eeeaeb;
+    padding: 0.5rem 0 0.75rem 1rem;
+}
+
+a {
+    color: #eceff1;
+    display: block;
+    text-decoration: none;
+}
+
+.logo,
+nav {
+    justify-content: center;
+    text-align: center;
+}
+
+.logo {
+    line-height: 1;
+}
+
+.logo h1 {
+    font-family: "Pacifico", cursive;
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.logo p {
+    letter-spacing: 0.3rem;
+}
+
+/* Toggle Links */
+
+nav {
+    padding-top: 1rem;
+}
+
+.top-level {
+    margin: 0 1.5rem;
+    min-width: 12rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.top-level label {
+    text-decoration: underline;
+}
 
 
-/* MOBILE VIEW */
+header input[type="checkbox"] {
+    display: none;
+}
 
+header label {
+    cursor: pointer;
+    user-select: none;
+}
+.top-level label img {
+    fill: #eeeaeb;
+    display: inline;
+    padding-top: 0.2rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.arrow-colour {
+    filter: invert(93%) sepia(0%) saturate(2058%) hue-rotate(271deg) brightness(104%) contrast(87%);
+}
+
+.collapse-menu {
+    background-color: #21AAAC;
+    min-width: 100%;
+    left: 0;
+    line-height: 2;
+    padding: 1rem;
+    text-align: left;
+    top: 1rem;
+    transition: transform 0.3s;
+    transform-origin: top;
+    position: absolute;
+}
+
+.collapse-menu a:hover {
+    text-decoration: none;
+}
+
+input:not(:hover) ~ .collapse-menu {
+    transform: scaleY(0);
+}
+
+/* Main */
+
+main {
+    line-height: 1.2;
+    padding: 5rem 2rem;
+    text-align: center;
+    background: url('../img/grapefruit-bg.jpg') center / cover no-repeat;
+    background-size: cover;
+}
+
+main h2 {
+    font-size: 3rem;
+    font-family: "Pacifico", cursive;
+    padding: 1rem;
+}
+
+.button {
+    background-color: #21AAAC;
+    border: none;
+    border-radius: 0.5rem;
+    color: #eceff1;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.hero {
+    color: #eceff1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 220px);
+    padding-left: 35rem;
+}
+
+.hero p {
+    padding: 1rem;
+}
 
 /* DESKTOP VIEW */
 @media screen and (min-width: 720px) {
